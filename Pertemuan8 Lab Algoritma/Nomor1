@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+  int a, b, c[100][100], d[100][100], sum[100][100], e, f;
+  cout << "Masukan Jumlah Baris: ";
+  cin >> a;
+  cout << "Masukan Jumlah Kolom: ";
+  cin >> b;
+  
+  cout << "Masukan matriks pertama: " << endl;
+  for(e = 0; e < a; e++)
+    for(f = 0; f < b; f++)
+    {
+      cout << "Matriks a" << e + 1 << f + 1 << " : ";
+      cin >> c[e][f];
+      }
+  cout << endl << "Masukan matriks kedua: " << endl;
+  for(e = 0; e < a; e++)
+    for(f = 0; f < b; f++)
+    {
+      cout << "Matriks b" << e + 1 << f + 1 << " : ";
+      cin >> d[e][f];
+      }
+  
+  for(e = 0; e < a; e++)
+    for(f = 0; f < b; f++)
+      sum[e][f] = c[e][f] + d[e][f];
+  cout << "Penjumlahan kedua matriks: " << endl;
+  for(e = 0; e < a; e++){
+    for(f = 0; f < b; f++){
+      cout << sum[e][f] << " ";
+      if(f == b - 1)
+        cout << endl;
+      }
+    }
+  
+  for(e = 0; e < a; e++)
+    for(f = 0; f < b; f++)
+      sum[e][f] = c[e][f] - d[e][f];
+  cout << "Pengurangan kedua matriks :" << endl;
+  for(e = 0; e < a; ++e){
+    for(f = 0; f < b; ++f){
+      cout << sum[e][f] << " ";
+      if(f == b - 1)
+        cout << endl;
+    }
+    }
+
+  for(e = 0; e < a; e++)
+    for(f = 0; f < b; f++)
+      sum[e][f] = c[e][f] * d[e][f];
+  cout << "Perkalian kedua matriks :" << endl;
+  for(e = 0; e < a; e++){
+    for(f = 0; f < b; f++){
+      cout << sum[e][f] << " ";
+      if(f == b - 1)
+        cout << endl;
+    }
+    }
+  return 0;
+  }
