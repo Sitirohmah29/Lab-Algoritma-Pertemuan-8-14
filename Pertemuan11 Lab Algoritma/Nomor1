@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int i, *Bilangan;
+  Bilangan = &i;
+  *Bilangan = 200;
+
+  cout << *Bilangan << " ";
+  (*Bilangan)++;
+  cout << *Bilangan << " ";
+  (*Bilangan)--;
+  cout << *Bilangan << "\n";
+
+  getchar();
+}
